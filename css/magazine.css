@@ -321,6 +321,14 @@ body{
 	float:left;
 }
 
+.instructions {
+	position: sticky;
+	z-index: -1;
+	bottom: 30px;
+	font-family: Times;
+	text-align: center;
+}
+
 .exit-message{
 	position: absolute;
 	top:10px;
