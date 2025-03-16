@@ -72,8 +72,6 @@ function zoomTo(event) {
 
 }
 
-
-
 // Load regions
 
 function loadRegions(page, element) {
@@ -219,7 +217,6 @@ function disableControls(page) {
 // Set the width and height for the viewport
 
 function resizeViewport() {
-
 	var width = $(window).width(),
 		height = $(window).height(),
 		options = $('.magazine').turn('options');
@@ -252,23 +249,14 @@ function resizeViewport() {
 			if ($('.magazine').turn('page')==1)
 				$('.magazine').turn('peel', 'br');
 
-			$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
-			$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
 		}
+		$('.next-button').css({height: bound.height, backgroundPosition: '-38px '+(bound.height/2-32/2)+'px'});
+		$('.previous-button').css({height: bound.height, backgroundPosition: '-4px '+(bound.height/2-32/2)+'px'});
 
 		$('.magazine').css({top: -bound.height/2, left: -bound.width/2});
 	}
 
-	var magazineOffset = $('.magazine').offset(),
-		boundH = height - magazineOffset.top - $('.magazine').height(),
-		marginTop = (boundH - $('.thumbnails > div').height()) / 2;
-
-	if (marginTop<0) {
-		$('.thumbnails').css({height:1});
-	} else {
-		$('.thumbnails').css({height: boundH});
-		$('.thumbnails > div').css({marginTop: marginTop});
-	}
+	var magazineOffset = $('.magazine').offset();
 
 	if (magazineOffset.top<$('.made').height())
 		$('.made').hide();
@@ -298,44 +286,6 @@ function moveBar(yes) {
 	}
 }
 
-function setPreview(view) {
-
-	var previewWidth = 112,
-		previewHeight = 73,
-		previewSrc = 'pages/preview.jpg',
-		preview = $(_thumbPreview.children(':first')),
-		numPages = (view==1 || view==$('#slider').slider('option', 'max')) ? 1 : 2,
-		width = (numPages==1) ? previewWidth/2 : previewWidth;
-
-	_thumbPreview.
-		addClass('no-transition').
-		css({width: width + 15,
-			height: previewHeight + 15,
-			top: -previewHeight - 30,
-			left: ($($('#slider').children(':first')).width() - width - 15)/2
-		});
-
-	preview.css({
-		width: width,
-		height: previewHeight
-	});
-
-	if (preview.css('background-image')==='' ||
-		preview.css('background-image')=='none') {
-
-		preview.css({backgroundImage: 'url(' + previewSrc + ')'});
-
-		setTimeout(function(){
-			_thumbPreview.removeClass('no-transition');
-		}, 0);
-
-	}
-
-	preview.css({backgroundPosition:
-		'0px -'+((view-1)*previewHeight)+'px'
-	});
-}
-
 // Width of the flipbook when zoomed in
 
 function largeMagazineWidth() {
@@ -363,7 +313,6 @@ function decodeParams(data) {
 function calculateBound(d) {
 	
 	var bound = {width: d.width, height: d.height};
-
 	if (bound.width>d.boundWidth || bound.height>d.boundHeight) {
 		
 		var rel = bound.width/bound.height;

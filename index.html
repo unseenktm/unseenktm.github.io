@@ -1,10 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>unseenKTM - an e-Magazine</title>
   </head>
   <body>
+    <nav class="navbar">
+      <div class="navbar-wrap">
+        <a href="#" class="logo">unseenKTM</a>
+        <ul class="nav-links">
+          <li style="--i:2"><a href="./blog.html">Blog</a></li>
+          <li style="--i:1"><a href="./about.html">About/Contact</a></li>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <div class="card">
         <a href="./issue-13/index.html" target="_blank">
@@ -47,7 +62,7 @@
         </a>
       </div>
       <div class="card">
-        <a href="./issue-9//index.html" target="_blank">
+        <a href="./issue-9/index.html" target="_blank">
           <div class="card-img">
             <img src="./issue-9/pages/1.jpg" alt="" />
           </div>
@@ -147,29 +162,153 @@
     a {
       text-decoration: none;
     }
-    .container { 
-      margin: 3rem auto;
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5a0;
+    }
+    .navbar {
+      background-color: #FF7020E0; /* Dark orange */
+      padding: 1rem 2rem;
+      box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+    }
+    .navbar-wrap {
+      margin: auto auto;
       max-width: 1800px;
       display: flex;
-      flex-wrap: wrap;
-      gap: 5rem;
-      justify-content: center;
+      justify-content: space-between;
+      align-items: center;
     }
-    .card {
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+      text-shadow: 1px 1px 1px #606060;
+    }
+    .nav-links {
       display: flex;
-      flex-direction: column;
-      justify-content: end;
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-      border: solid 1px #00000030;
-      border-radius: 8px;
+      list-style: none;
     }
-    .card-img, .card-img > img {
-      max-width: 350px;
-      border-radius: 8px;
+    .nav-links li {
+      margin-left: 1.5rem;
     }
-    .card-title {
-      text-align: center;
-      margin: 10px 10px;
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      text-shadow: 1px 1px 1px #606060;
     }
+    .nav-links a:hover {
+      color: #FFD700; /* Gold hover effect */
+    }
+    .burger {
+      display: none;
+      cursor: pointer;
+    }
+    .burger div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+    @media screen and (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        right: 0;
+        height: 0;
+        top: 60px;
+        background-color: #FF8C00;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateY(-10px);
+        transition: all 0.5s ease;
+        overflow: hidden;
+        z-index: 100;
+      }
+
+      .nav-links.active {
+        height: auto;
+        padding: 1rem 0;
+        transform: translateY(0);
+      }
+
+      .nav-links li {
+        margin: 0.8rem 0;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideIn 0.5s forwards;
+        animation-delay: calc(0.1s * var(--i));
+      }
+
+      @keyframes slideIn {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .nav-links.active li {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .burger {
+        display: block;
+      }
+
+      .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+
+      .toggle .line2 {
+        opacity: 0;
+      }
+
+      .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+    }
+      .container { 
+        margin: 3rem auto;
+        max-width: 1800px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+        justify-content: center;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border: solid 1px #00000030;
+        border-radius: 8px;
+      }
+      .card:hover {
+        box-shadow: 0 4px 8px 0 #ff702030;
+        border-color: #ff702030;
+      }
+      .card-img, .card-img > img {
+        max-width: 350px;
+        border-radius: 8px;
+      }
+      .card-title {
+        text-align: center;
+        margin: 10px 10px;
+      }
   </style>
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('toggle');
+    });
+  </script>
 </html>
