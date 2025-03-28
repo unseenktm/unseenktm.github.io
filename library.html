@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library | unseenKTM</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/unseenktm.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J9P45SWWD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3J9P45SWWD');
+</script>
+
+<body>
+  <header id="navbar-head" class="bg-primary">
+    <div class="fluid-container">
+      <nav class="navbar">
+        <div class="navbar-wrap">
+          <a href="./index.html" class="logo garamond">unseenKTM</a>
+          <ul class="nav-links">
+            <li style="--i:2" class="active-tab">Library</li>
+            <li style="--i:1"><a href="./about.html">About</a></li>
+            <li style="--i:1"><a class="btn btn-nav" href="./contact.html">Contact Us</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="bg-paper">
+    <div class="fluid-container p12" id="container">
+    </div>
+  </main>
+
+  <footer class="bg-orange text-surface-tonal-a0 tcenter">
+    <p class="p1">All work is copyright of respective owner, otherwise &copy; 2025 unseenKTM</p>
+  </footer>
+</body>
+<style>
+</style>
+<script>
+  const burger = document.querySelector('.burger');
+  const nav = document.querySelector('.nav-links');
+  const navLinks = document.querySelectorAll('.nav-links li');
+
+  burger.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    burger.classList.toggle('toggle');
+  });
+
+  var issues = [
+    `<div class="magazine">
+            <a href="./issue-13/index.html" target="_blank">
+                <div class="magazine-spine">Issue 13 (Nov 2024)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-13/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-12/index.html" target="_blank">
+                <div class="magazine-spine">Issue 12 (Dec 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-12/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-11/index.html" target="_blank">
+                <div class="magazine-spine">Issue 11 (Nov 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-11/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue_10/index.html" target="_blank">
+                <div class="magazine-spine">Issue 10 (Oct 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue_10/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-9/index.html" target="_blank">
+                <div class="magazine-spine">Issue 9 (Sep 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-9/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-8/index.html" target="_blank">
+                <div class="magazine-spine">Issue 8 (Aug 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-8/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-7/index.html" target="_blank">
+                <div class="magazine-spine">Issue 7 (Jul 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-7/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-6/index.html" target="_blank">
+                <div class="magazine-spine">Issue 6 (Jun 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-6/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-5/index.html" target="_blank">
+                <div class="magazine-spine">Issue 5 (May 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-5/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-4/index.html" target="_blank">
+                <div class="magazine-spine">Issue 4 (Apr 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-4/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-3/index.html" target="_blank">
+                <div class="magazine-spine">Issue 3 (Mar 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-3/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-2/index.html" target="_blank">
+                <div class="magazine-spine">Issue 2 (Feb 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-2/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+    `<div class="magazine">
+            <a href="./issue-1/index.html" target="_blank">
+                <div class="magazine-spine">Issue 1 (Jan 2023)</div>
+                <div class="magazine-cover" style="background-image: url('./issue-1/pages/1.jpg')">
+                </div>
+            </a>
+        </div>`,
+  ]
+
+  function numberOfColumns() {
+    const availableWidth = window.innerWidth;
+    if (availableWidth < 900) {
+      return 1;
+    } else if (availableWidth < 1280) {
+      return 2;
+    } else {
+      return 3;
+    }
+  }
+
+  function clearContents() {
+    console.log('clearing content')
+    const mainDiv = document.getElementById('container')
+    mainDiv.innerHTML = ''
+  }
+
+  function populateContents() {
+    console.log('populating contents')
+    const availableWidth = window.innerWidth
+    const numCols = numberOfColumns()
+    var counter = 0
+    const mainDiv = document.getElementById('container')
+    while (counter < issues.length) {
+      const shelfRow = document.createElement('section')
+      shelfRow.classList.add('shelf-row')
+      const magazinesDiv = document.createElement('div')
+      magazinesDiv.classList.add('magazines')
+      const magazinesContentForShelfRow = issues.slice(counter, counter + numCols).join('')
+      magazinesDiv.innerHTML = magazinesContentForShelfRow
+      const shelfDiv = document.createElement('div')
+      shelfDiv.classList.add('shelf')
+      const shelfSupportDiv = document.createElement('div')
+      shelfSupportDiv.classList.add('shelf-support')
+      shelfRow.appendChild(magazinesDiv)
+      shelfRow.appendChild(shelfDiv)
+      shelfRow.appendChild(shelfSupportDiv)
+      mainDiv.appendChild(shelfRow)
+      counter += numCols
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', populateContents, false);
+  window.addEventListener('resize', function () {
+    clearContents()
+    populateContents()
+  })
+</script>
+
+</html>

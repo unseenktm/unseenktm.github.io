@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | unseenKTM</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/unseenktm.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J9P45SWWD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3J9P45SWWD');
+</script>
+
+<body>
+  <header id="navbar-head" class="bg-primary">
+    <div class="fluid-container">
+      <nav class="navbar">
+        <div class="navbar-wrap">
+          <a href="./index.html" class="logo garamond">unseenKTM</a>
+          <ul class="nav-links">
+            <li style="--i:2"><a href="./library.html">Library</a></li>
+            <li style="--i:1"><a href="./about.html">About</a></li>
+            <li style="--i:1"><span class="btn btn-nav text-secondary"><strong>Contact Us</strong></span></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bg-primary">
+    <div class="fluid-container p12 flex flex-col gap-2 text-white">
+
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">Submitting your work:</h2>
+
+        <p>We believe great stories deserve to be seen. Whether you're a seasoned photographer or someone with a unique
+          perspective to share, we invite you to collaborate with us or submit your work. Please contact us for
+          collaborations and ideas.</p><br>
+
+        <ul class="bullets-inside">
+          <li>Send us images of your photo project.</li>
+          <li>Include a description of the project, offering insights into the story behind each photograph.</li>
+          <li>Email your submission to <span class="highlight"><strong>mail@unseenktm.com</strong></span>.</li>
+        </ul><br>
+        <p>Your vision is what makes photography a powerful form of expression and we can't wait to be inspired by your
+          brilliance.</p>
+      </div>
+
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">How to reach us:</h2>
+        <div class="flex jeven p1 gap-1">
+          <div class="member p1">
+            <h3 class="pb-1 highlight">unseenKTM</h3>
+            <p><em>Instagram Page</em></p>
+            <a class="socials" target="_blank" href="https://instagram.com/unseenKTM"><span
+                class="flex flex-row acenter jcenter"><img class="icon" src="./pics/instagram.svg" />
+                <strong>&nbsp;@unseenktm</strong></span></a>
+          </div>
+
+          <div class="member p1">
+            <h3 class="pb-1 highlight">mail@unseenktm.com</h3>
+            <p><em>Email</em></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">You can contact us with this form as well:</h2>
+        <div class="flex jcenter bg-secondary"><iframe id="contact-us-form"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdIIClIfC1_u0kulWOTnx9zOxbLa0f0dsrRrjzgMkkRVKQTag/viewform?embedded=true"
+            frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+          <div>
+          </div>
+        </div>
+  </main>
+
+  <footer class="bg-orange text-surface-tonal-a0 tcenter">
+    <p class="p1">All work is copyright of respective owner, otherwise &copy; 2025 unseenKTM</p>
+  </footer>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('toggle');
+    });
+  });
+</script>
