@@ -234,7 +234,7 @@ function resizeViewport() {
 		var bound = calculateBound({
 			width: options.width,
 			height: options.height,
-			boundWidth: Math.min(options.width, width),
+			boundWidth: Math.min(options.width, width - 50),
 			boundHeight: Math.min(options.height, height)
 		});
 
@@ -311,7 +311,6 @@ function decodeParams(data) {
 // Calculate the width and height of a square within another square
 
 function calculateBound(d) {
-	
 	var bound = {width: d.width, height: d.height};
 	if (bound.width>d.boundWidth || bound.height>d.boundHeight) {
 		
@@ -332,3 +331,4 @@ function calculateBound(d) {
 		
 	return bound;
 }
+
