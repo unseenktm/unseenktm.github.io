@@ -46,6 +46,10 @@
   font-family: 'DMSans';
   src: url('../fonts/DMSans-Regular.ttf')
 }
+@font-face {
+  font-family: 'FuturaBold';
+  src: url('../fonts/FuturaBold.ttf')
+}
 
 * {
   padding: 0px;
@@ -88,6 +92,10 @@ a {
 .navbar {
   padding: 1rem 2rem;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo:hover {
+  color: var(--clr-primary-a40);
 }
 
 .p12 {
@@ -343,6 +351,9 @@ a {
 .garamond {
   font-family: 'Garamond';
 }
+.futura-bold {
+  font-family: 'FuturaBold';
+}
 
 .new-edition-img {
   border-radius: 4px;
@@ -533,6 +544,17 @@ a {
     max-width: 100%;
   }
 
+  .p12 {
+    padding: 1rem 1rem;
+  }
+
+  .p2 {
+    padding: 1rem;
+  }
+
+  .navbar {
+    padding: 1rem 1rem;
+  }
   .image-container::before {
     width: 100%;
   }
