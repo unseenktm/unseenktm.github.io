@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | unseenKTM</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/unseenktm.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J9P45SWWD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3J9P45SWWD');
+</script>
+
+<body>
+  <header id="navbar-head" class="bg-primary">
+    <div class="fluid-container">
+      <nav class="navbar">
+        <div class="navbar-wrap">
+          <a href="#" class="logo garamond">unseenKTM</a>
+          <ul class="nav-links">
+            <li style="--i:3"><a href="./library.html">Library</a></li>
+            <li style="--i:2"><a href="./about.html">About</a></li>
+            <li style="--i:1"><a class="btn btn-nav" href="./contact.html"> Contact Us</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="bg-primary flex h-full">
+      <div class="fluid-container p12 flex gap-2 jbetween acenter acenter-mb jeven-mb">
+        <div class="flex flex-col gap-1 jcenter">
+          <div class="h4 text-orange lp uppercase lato">Issue 14</div>
+          <div class="flex flex-col gap-1">
+            <a href="./issue-13/index.html" target="_blank">
+              <div class="h1 garamond text-white">Chasing Autumn Colors</div>
+            </a>
+            <div class="text-white h4">See the latest edition of unseenKTM</div>
+          </div>
+          <a class="btn text-white mt-1" href="./issue-13/index.html" target="_blank">Read the latest edition</a>
+        </div>
+        <a class="image-container" href="./issue-13/index.html" target="_blank">
+          <img class="new-edition-img" src="./issue-13/pages/1.jpg" />
+        </a>
+      </div>
+    </div>
+    <div class="bg-secondary">
+      <div class="fluid-container p44 tcenter garamond site-text text-white animate-on-scroll opacity-0 lh150">
+        Showcasing the <strong><em>untold stories of Nepal and its photographers</em></strong>, capturing the essence of
+        different landscapes, culture, and everyday moments <strong><em>one frame at a time</em></strong>.
+      </div>
+    </div>
+    <div class="bg-primary h-half flex">
+      <div class="fluid-container p12 flex gap-1 jbetween acenter">
+        <img class="landing-img opacity-0" src="./pics/landing-01.jpg" />
+        <img class="landing-img opacity-0" src="./pics/landing-02.jpg" />
+        <img class="landing-img opacity-0" src="./pics/landing-03.jpg" />
+      </div>
+    </div>
+
+    <div class="bg-secondary">
+      <div class="fluid-container p44 tcenter site-text text-white animate-on-scroll opacity-0 lh150">
+        <div class="quote garamond">When you photograph people in color, you photograph their clothes. But when you
+          photograph people in Black and white, you photograph their souls!</div>
+        <div class="garamond">- Ted Grant</div>
+      </div>
+    </div>
+
+    <div class="bg-primary flex jcenter h-half">
+      <div class="fluid-container p12 flex gap-2 jbetween acenter acenter-mb jeven-mb">
+        <div class="flex flex-col gap-1 jcenter">
+          <div class="h4 text-orange lp uppercase lato">TIMELINE</div>
+          <div class="flex flex-col gap-1">
+            <div class="h1 text-white">unseenKTM through the years</div>
+            <div class="text-white h4">Explore how unseenKTM is what is it today</div>
+          </div>
+          <a class="btn text-white mt-1" href="./issue-12/index.html" target="_blank">Read previous edition of
+            unseenKTM</a>
+          <a class="text-white underline" href="./library.html" target="_blank">View All</a>
+        </div>
+        <a class="image-container" href="./issue-12/index.html" target="_blank">
+          <img class="new-edition-img" src="./issue-12/pages/1.jpg" />
+        </a>
+      </div>
+    </div>
+
+    <div class="bg-secondary">
+      <div class="fluid-container flex flex-col jcenter acenter gap-2 p44 tcenter garamond site-text text-white">
+        <div class="h1">Calling All Photographers!</div>
+        <div class="h4 lh200">
+          We invite photographers to be a part of our journey as well. Whether you’re capturing rare angles,
+          behind-the-scenes shots, or fresh perspectives, your photos can help uncover the unseen stories and their
+          legacy for the world to see.
+        </div>
+        <a class="btn text-white h4" href="./contact.html" target="_blank">Submit your photos today!</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-orange text-surface-tonal-a0 tcenter">
+    <p class="p1">All work is copyright of respective owner, otherwise &copy; 2025 unseenKTM</p>
+  </footer>
+
+  <div class="scroll-indicator">&#x25BC;</div>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener('scroll', () => {
+      const indicator = document.querySelector('.scroll-indicator');
+      if (window.scrollY === 0) {
+        indicator.style.display = 'block';
+      } else {
+        indicator.style.display = 'none';
+      }
+    });
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('toggle');
+    });
+
+    const navHeight = document.querySelector('nav').offsetHeight;
+    document.documentElement.style.setProperty('--nav-height', `${navHeight}px`);
+    const observerOptions = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 1 // 10% of element is visible
+    };
+
+    const landingObserverOptions = {
+      root: null, // viewport
+      rootMargin: '0px',
+      threshold: 0.7 // 10% of element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            entry.target.classList.add('fade-in-animated');
+          });
+          // Optional: stop observing after first view
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    // Select elements you want to animate
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    animateElements.forEach(el => observer.observe(el));
+
+    const landingObserver = new IntersectionObserver((entries, observer) => {
+      var counter = 1;
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          requestAnimationFrame(() => {
+            entry.target.classList.add('landing-animated');
+            entry.target.style.animationDelay = `${counter*0.5}s`;
+            counter += 1;
+          });
+          // Optional: stop observing after first view
+          observer.unobserve(entry.target);
+        }
+      });
+    }, landingObserverOptions);
+    const landingElements = document.querySelectorAll('.landing-img');
+    landingElements.forEach(el => landingObserver.observe(el));
+  });
+</script>
+
+</html>

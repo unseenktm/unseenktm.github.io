@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | unseenKTM</title>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./css/unseenktm.css">
+</head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3J9P45SWWD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-3J9P45SWWD');
+</script>
+
+<body>
+  <header id="navbar-head" class="bg-primary">
+    <div class="fluid-container">
+      <nav class="navbar">
+        <div class="navbar-wrap">
+          <a href="./index.html" class="logo garamond">unseenKTM</a>
+          <ul class="nav-links">
+            <li style="--i:2"><a href="./library.html">Library</a></li>
+            <li style="--i:1" class="active-tab">About</li>
+            <li style="--i:1"><a class="btn btn-nav" href="./contact.html">Contact Us</a></li>
+          </ul>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="bg-primary">
+    <div class="fluid-container p12 flex text-white flex-col gap-2">
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">Who we are:</h2>
+        <p><strong>unseenKTM</strong> is a digital photo magazine dedicated to showcasing the diverse beauty of Nepal
+          and celebrating the creativity of Nepali photographers. While it began as a platform to spotlight Kathmandu’s
+          hidden gems, our vision has since expanded to embrace the rich visual stories unfolding across the entire
+          country and beyond.</p><br>
+        <p>Our magazine proudly features not only photographs of Nepal but also the remarkable work of Nepali
+          photographers from around the world, capturing moments and stories wherever they may be.</p>
+      </div>
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">Our Mission:</h2>
+        <p>Our mission is simple yet powerful: to capture vibrant culture, landscapes, and people, ideas and stories
+          through compelling photography. Each issue is a thoughtfully curated collection of images that brings to life
+          the untold stories of everyday moments, fleeting emotions, and remarkable encounters.</p>
+      </div>
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">What makes <strong>unseenKTM</strong> beautiful?</h2>
+        <p><strong>unseenKTM</strong> is more than just a magazine &#8209; it’s a labor of love. Born from a passion for
+          photography, this project thrives on the dedication of volunteers. No one gets paid; every contribution is a
+          testament to the desire to create and connect. While it started a personal project of one person, it has since
+          then grown to be a collaboration of many individuals.</p>
+      </div>
+      <div class="bg-secondary p2 br-8 abt">
+        <h2 class="abt-title">Our Core Team</h2>
+        <div class="flex jeven p1 gap-1">
+          <div class="member p1">
+            <h3 class="pb-1 highlight">Anupam</h3>
+            <p><em>Founder/Curator</em></p>
+            <a class="socials" target="_blank" href="https://instagram.com/dahal.ad"><span
+                class="flex flex-row acenter jcenter"><img class="icon" src="./pics/instagram.svg" />
+                <strong>&nbsp;@dahal.ad</strong></span></a>
+          </div>
+
+          <div class="member p1">
+            <h3 class="pb-1 highlight">Prinsa</h3>
+            <p><em>Curator/Layout</em></p>
+            <a class="socials" target="_blank" href="https://instagram.com/_prinsa__"><span
+                class="flex flex-row acenter jcenter"><img class="icon" src="./pics/instagram.svg" />
+                <strong>&nbsp;@_prinsa__</strong></span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-orange text-surface-tonal-a0 tcenter">
+    <p class="p1">All work is copyright of respective owner, otherwise &copy; 2025 unseenKTM</p>
+  </footer>
+</body>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burger = document.querySelector('.burger');
+    const nav = document.querySelector('.nav-links');
+    const navLinks = document.querySelectorAll('.nav-links li');
+
+    burger.addEventListener('click', () => {
+      nav.classList.toggle('active');
+      burger.classList.toggle('toggle');
+    });
+  });
+</script>

@@ -1,0 +1,202 @@
+input,
+input[type="text"],
+input[type="search"],
+isindex,
+textarea,
+button {
+	outline: none;
+	margin: 0 auto;
+	padding: 5px 10px;
+	box-sizing: border-box;
+}
+
+.zf-clearBoth {
+	clear: both;
+}
+
+.zf-templateWrapper {
+	background: var(--clr-surface-tonal-a20);
+	border-radius: 8px;
+}
+
+.zf-tempContDiv input[type="text"],
+.zf-tempContDiv textarea {
+	background: var(--clr-surface-tonal-a30);
+	border: 1px solid var(--clr-surface-tonal-a30);
+	border-radius: 64px;
+	padding: 8px 24px;
+	font-size: 20px;
+	color: white;
+}
+
+.zf-tempContDiv input[type="text"]:hover,
+.zf-tempContDiv textarea:hover {
+	border: 1px solid rgba(157, 157, 157, 0.75) !important;
+}
+
+.zf-tempContDiv input[type="text"]:focus,
+.zf-tempContDiv textarea:focus {
+	border: 1px solid rgba(157, 157, 157, 0.75) !important;
+	box-shadow: 0 0 5px var(--clr-primary-a50) !important;
+}
+
+.zf-tempContDiv textarea {
+	border-radius: 16px;
+	resize: none;
+}
+
+.zf-errorMessage {
+	font: 12px Arial, Helvetica, sans-serif;
+	color: #ff9b9b;
+	padding-top: 5px;
+}
+
+.zf-important {
+	color: #ff9b9b !important;
+	font-weight: bolder;
+	margin-left: 0px;
+	padding: 0;
+	font-size: 13px !important;
+}
+
+.zf-overflow {
+	overflow: hidden;
+}
+
+.zf-subContWrap {
+	padding: 0;
+	margin: 10px;
+	margin-bottom: 0;
+}
+
+.zf-tempFrmWrapper {
+	padding: 10px 15px;
+	margin: 1px 0;
+}
+
+.zf-tempFrmWrapper .zf-tempContDiv {
+	margin: 0;
+	padding: 0;
+}
+
+/* Needed */
+.zf-tempFrmWrapper .zf-labelName {
+	font-weight: bold;
+	font-size: 13px;
+	color: var(--clr-primary-a40);
+}
+
+.zf-name .zf-tempContDiv span {
+	float: left;
+	display: block;
+}
+
+.zf-name .zf-tempContDiv span {
+	margin-bottom: 5px;
+	margin-left: 4%;
+}
+
+.zf-name .zf-tempContDiv span.last {
+	margin-right: 0;
+}
+
+.zf-name .zf-tempContDiv span label {
+	display: block;
+	padding-top: 3px;
+}
+
+.zf-name .zf-tempContDiv input[type="text"] {
+	width: 100%;
+}
+
+.zf-name .zf-tempContDiv span label {
+	font-size: 11px;
+	padding-top: 3px;
+}
+
+.zf-name .zf-tempContDiv span label {
+	color: var(--clr-primary-a50);
+}
+
+.zf-tempContDiv input[type="file"] {
+	outline: none;
+	border: 1px solid #ccc;
+	margin: 0 auto;
+	padding: 5px;
+	width: auto;
+}
+
+.zf-oneColumns .zf-tempContDiv span {
+	margin: 0 0 13px 0;
+	padding: 0;
+	width: 100%;
+	display: block;
+	clear: both;
+}
+
+.zf-oneColumns .zf-tempContDiv span:last-child {
+	margin-bottom: 0;
+}
+
+.zf-oneColumns .zf-tempContDiv span input[type="checkbox"] {
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin: 0;
+	padding: 0;
+	margin-top: 3px;
+	float: left;
+}
+
+.zf-oneColumns .zf-tempContDiv span input[type="radio"] {
+	display: block;
+	width: 13px;
+	height: 13px;
+	margin-top: 4px;
+	padding: 0;
+	float: left;
+}
+
+.zf-oneColumns .zf-tempContDiv span label {
+	line-height: 19px;
+	display: block;
+	margin: 0 0 0 20px;
+	padding: 0;
+	font-size: 13px;
+}
+
+.zf-fmFooter {
+	margin: 0;
+	padding: 25px;
+}
+
+.zf-large .zf-tempContDiv input[type="text"],
+.zf-large .zf-tempContDiv textarea,
+.zf-large .zf-tempContDiv .zf-sliderCont {
+	width: 100%;
+}
+
+.zf-namelarge .zf-tempContDiv span {
+	width: 23.5%;
+	margin-left: 2%;
+	margin-right: 0;
+	margin-bottom: 0;
+}
+
+.zf-namelarge .zf-twoType .zf-nameWrapper span {
+	width: 49%;
+	margin-left: 2%;
+}
+
+.zf-namelarge .zf-tempContDiv span:first-child {
+	margin-left: 0 !important;
+}
+
+.zf-topAlign .zf-tempFrmWrapper .zf-labelName {
+	padding-bottom: 8px;
+	display: block;
+}
+
+.zf-topAlign .zf-oneColumns .zf-labelName {
+	padding-bottom: 8px;
+}
