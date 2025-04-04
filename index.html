@@ -58,7 +58,7 @@
         </a>
       </div>
     </div>
-    <div class="bg-secondary">
+    <div id="scroll-target" class="bg-secondary">
       <div class="fluid-container p44 tcenter garamond site-text text-white animate-on-scroll opacity-0 lh150">
         Showcasing the <strong><em>untold stories of Nepal and its photographers</em></strong>, capturing the essence of
         different landscapes, culture, and everyday moments <strong><em>one frame at a time</em></strong>.
@@ -115,7 +115,7 @@
     <p class="p1">All work is copyright of respective owner, otherwise &copy; 2025 unseenKTM</p>
   </footer>
 
-  <div class="scroll-indicator">&#x25BC;</div>
+  <div id="scroll-switch" class="scroll-indicator">&#x25BC;</div>
 </body>
 
 <script>
@@ -183,6 +183,11 @@
     }, landingObserverOptions);
     const landingElements = document.querySelectorAll('.landing-img');
     landingElements.forEach(el => landingObserver.observe(el));
+
+    document.getElementById("scroll-switch").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.getElementById("scroll-target").scrollIntoView({ behaviour: 'smooth' });
+    });
   });
 </script>
 
